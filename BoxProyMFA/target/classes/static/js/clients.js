@@ -1,6 +1,3 @@
-$(document).ready(function(){
-    traerDatos();
-});
 function traerDatos(){
     $.ajax({
         url: "http://localhost:8089/api/Client/all",
