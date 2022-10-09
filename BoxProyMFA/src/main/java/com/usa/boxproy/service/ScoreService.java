@@ -1,8 +1,7 @@
 package com.usa.boxproy.service;
 
-import com.usa.boxproy.entities.Box;
+
 import com.usa.boxproy.entities.Score;
-import com.usa.boxproy.repository.BoxRepository;
 import com.usa.boxproy.repository.ScoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

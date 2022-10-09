@@ -1,5 +1,7 @@
 package com.usa.boxproy.controller;
 
+import com.usa.boxproy.entities.CountClient;
+import com.usa.boxproy.entities.CountStatus;
 import com.usa.boxproy.entities.Reservation;
 import com.usa.boxproy.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,4 +43,32 @@ public class ReservationController {
         reservationService.delete(idReservation);
     }
 
+
+    @GetMapping("/report-clients")
+    public List<CountClient> getReportTopClients(){
+        return reservationService.getTopClients();
+    }
+
+    @GetMapping("/report-dates/{dateA}/{dateB}")
+    public List<Reservation> getReservationsDate(@PathVariable("dateA") String dateA,
+                                                  @PathVariable("dateB") String dateB){
+        return reservationService.getReservationPeriod(dateA,dateB);
+    }
+    @GetMapping("/report-status")
+    public CountStatus getReportStatusReservations(){
+        return reservationService.getReservationStatus();
+    }
+    /*
+    @GetMapping("/report-dates/{inicial}/{final}")
+    public List<Reservation> getReservationPeriod(@PathVariable("inicial") String ini,
+                                                  @PathVariable("final") String fin){
+        return reservationService.getReservationPeriod(ini,fin);
+    }
+    @GetMapping("/report-dates_total/{inicial}/{final}")
+    public Integer getReservationPeriodTotal(@PathVariable("inicial") String ini,
+                                             @PathVariable("final") String fin){
+        return reservationService.getReservationPeriod(ini,fin).size();
+    }
+
+*/
 }
