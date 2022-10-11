@@ -23,7 +23,7 @@ function pintarRespuesta(cs) {
     let myTable= '<div class="container"><div class="row">';
     for(i=0;i<cs.length;i++){
         myTable+=
-            <div class="card m-2" style="width: 18rem;" >
+            `<div class="card m-2" style="width: 18rem;" >
                 <div class="card-body">
                     <h5 class="card-title">${cs[i].name}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${cs[i].email}</h6>
@@ -31,7 +31,11 @@ function pintarRespuesta(cs) {
                     <a href="#" class="card-link">Card link</a>
                     <button class={"btn btn-danger" onclick="borrarCliente(${cs[i].id})">Borrar</button>
                 </div>
-            </div>
+            </div>`
+    }
+        myTable += "</div></div>";
+        $('#listaClientes').append(myTable);
+
     }
     /*let myTable = "<Table BORDER=1>";
         myTable += "<tr>";
@@ -52,10 +56,7 @@ function pintarRespuesta(cs) {
         myTable += "</tr>";
 
     }*/
-    myTable += "</div></div>";
-    $('#listaClientes').append(myTable);
-    
-}
+
 
 function guardarCliente() {
     let idCliente = $("#idCliente").val();

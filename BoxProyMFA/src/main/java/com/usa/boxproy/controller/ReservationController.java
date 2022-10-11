@@ -58,17 +58,5 @@ public class ReservationController {
     public CountStatus getReportStatusReservations(){
         return reservationService.getReservationStatus();
     }
-    /*
-    @GetMapping("/report-dates/{inicial}/{final}")
-    public List<Reservation> getReservationPeriod(@PathVariable("inicial") String ini,
-                                                  @PathVariable("final") String fin){
-        return reservationService.getReservationPeriod(ini,fin);
-    }
-    @GetMapping("/report-dates_total/{inicial}/{final}")
-    public Integer getReservationPeriodTotal(@PathVariable("inicial") String ini,
-                                             @PathVariable("final") String fin){
-        return reservationService.getReservationPeriod(ini,fin).size();
-    }
 
-*/
 }
