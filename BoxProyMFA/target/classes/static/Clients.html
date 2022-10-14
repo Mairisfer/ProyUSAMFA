@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title>Clients</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstraps.min.js"></script>
     <script type="text/javascript" src="js/clients.js"></script>
-    <meta charset="UTF-8">
-
-    <title>Clients</title>
     <base href="/" >
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
 
     <div style="background-color: darkslategrey; padding: 15px; text-align: center">
         <h1 style="color: whitesmoke">. . .</h1>
-        <h1 style="background-color: darkslategray; color: whitesmoke; font-size: x-large;">Nuestros clientes</h1>
+        <h1 style="background-color: darkslategray; color: whitesmoke; font-size: xx-large;">Nuestros clientes</h1>
     </div>
     <br>
-</head>
+
 
 <body onload="traerDatos()">
-    <div id="tabla"></div>
+    <div id="tabladiv"></div>
 
-        <table id="tabla" class="card">
        <br>
-    </div>
+    </div id="registro" class="form-group container text-center">
         <div style="padding: 10px; width: 45%; margin: auto">
             <h3 style="text-align: center">Registrate</h3>
             <br>
-            <input class="form-control" type="text" placeholder="Tu nombre: " id="name"/><br><br>
-            <input class="form-control" type="text" placeholder="Tu correo: " id="email"/><br><br>
-            <input class="form-control" type="number" placeholder="Tu edad: " id="age"/><br><br>
-            <input class="form-control" type="text" placeholder="Tu contraseña: " id="password"/><br><br>
+            <input class="form-control mb-3" type="hidden" placeholder="Id: " id="idClient"/><br><br>
+            <input class="form-control mb-3" type="text" placeholder="Tu nombre: " id="name"/><br><br>
+            <input class="form-control mb-3" type="text" placeholder="Tu correo: " id="email"/><br><br>
+            <input class="form-control mb-3" type="number" placeholder="Tu edad: " id="age"/><br><br>
+            <input class="form-control mb-3" type="text" placeholder="Tu contraseña: " id="password"/><br><br>
 
-            <button onclick="" class="btn btn-success">Registrarse</button>
-            <button onclick="location.href='menu.html'" class="btn btn-primary">Volver</button>
+            <button onclick="guardarCliente()" class="btn btn-success mb-3">Registrarse</button>
+            <button onclick="actualizarCliente()" class="btn btn-primary mb-3">Actualizar</button>
+            <button onclick="location.href='menu.html'" class="btn btn-secondary mb-3">Volver</button>
             <br>
             <br>
-        </div>
+    </div>
 
 </body>
 </html>

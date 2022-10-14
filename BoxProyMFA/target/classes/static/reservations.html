@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title>Clients</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="/webjars/bootstrap/js/bootstraps.min.js"></script>
-    <script type="text/javascript" src="js/clients.js"></script>
-    <meta charset="UTF-8">
-
-    <title>Clients</title>
+    <script type="text/javascript" src="js/reservation.js"></script>
     <base href="/" >
-    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+</head>
 
     <div style="background-color: darkslategrey; padding: 15px; text-align: center">
         <h1 style="color: whitesmoke">. . .</h1>
-        <h1 style="background-color: darkslategray; color: whitesmoke; font-size: x-large;">Reservaciones</h1>
+        <h1 style="background-color: darkslategray; color: whitesmoke; font-size: xx-large;">Gestion de Reservas</h1>
     </div>
     <br>
-</head>
+
+<body onload="traerReservas()">
+<div id="tabladivRes"></div>
+
+<br>
+</div id="registroRes" class="form-group container text-center">
+<div style="padding: 10px; width: 45%; margin: auto">
+    <h3 style="text-align: center">Reserva ahora!</h3>
+    <br>
+    <input class="form-control mb-3" type="hidden" placeholder="Id: " id="idReservation"/><br><br>
+    <input class="form-control mb-3" type="date" placeholder="Fecha de reserva: " id="startDate"/><br><br>
+    <input class="form-control mb-3" type="date" placeholder="Fecha de devolución: " id="devolutionDate"/><br><br>
+
+    <button onclick="guardarReserva()" class="btn btn-success mb-3">Reservar</button>
+    <button onclick="actualizarReserva()" class="btn btn-primary mb-3">Actualizar</button>
+    <button onclick="location.href='menu.html'" class="btn btn-secondary mb-3">Volver</button>
+    <br>
+    <br>
+</div>
+
+</body>
+</html>

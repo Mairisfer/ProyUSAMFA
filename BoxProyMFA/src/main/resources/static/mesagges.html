@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mjes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css"/>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/bootstrap/js/bootstraps.min.js"></script>
+    <script type="text/javascript" src="js/messages.js"></script>
+    <base href="/" >
+</head>
+
+    <div style="background-color: darkslategrey; padding: 15px; text-align: center">
+        <h1 style="color: whitesmoke">. . .</h1>
+        <h1 style="background-color: darkslategray; color: whitesmoke; font-size: xx-large;">Tu opinión es muy valiosa para nosotros</h1>
+
+    </div>
+    <br>
+
+
+<body onload="traerMensajes()">
+    <div id="tabladivMes"></div>
+
+       <br>
+    </div id="registro" class="form-group container text-center">
+        <div style="padding: 10px; width: 45%; margin: auto">
+            <h4>Dejanos tus sugerencias, recomendaciones y/o tu experiencia</h4>
+            <br>
+            <input class="form-control mb-3" type="hidden" placeholder="Id: " id="idMessage"/><br><br>
+            <input class="form-control mb-3" type="text" placeholder="Mensaje: " id="messageText"/><br><br>
+
+            <button onclick="guardarMensaje()" class="btn btn-success mb-3">Opinar</button>
+            <button onclick="actualizarMensaje()" class="btn btn-primary mb-3">Actualizar</button>
+            <button onclick="location.href='menu.html'" class="btn btn-secondary mb-3">Volver</button>
+            <br>
+            <br>
+    </div>
+
+</body>
+</html>
